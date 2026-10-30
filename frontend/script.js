@@ -378,13 +378,16 @@ function triggerToast(title, message) {
 }
 
 // AFTER
+// Explore Category Navigation
 function handleExploreClick(title, message, targetUrl) {
-    // 1. Show the toast notification message
     triggerToast(title, message);
-    
-    // 2. Redirect to the target page after 1.8 seconds delay
     setTimeout(() => {
-        if (targetUrl) {
+        if (!targetUrl) return;
+        
+        const path = window.location.pathname;
+        if (path.endsWith('/frontend')) {
+            window.location.href = 'frontend/' + targetUrl;
+        } else {
             window.location.href = targetUrl;
         }
     }, 1000);
