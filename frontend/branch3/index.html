@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aagman | Beaches of Maharashtra</title>
+    <link rel="stylesheet" href="branch3.css">
+</head>
+<body>
+
+<header class="navbar">
+     <a href="../index.html" class="logo" title="Back to Main Portal">
+        <img src="FEP logo.png" alt="Aagman Logo" class="logo-img"> 
+        <span class="brand-name">Aagman</span>
+    </a>
+    <nav>
+        <a href="../index.html">Main Portal</a>
+        <a href="#home">Beaches</a>
+        <a href="#beaches">Beaches</a>
+        <a href="#map-section">Beach Map</a>
+        <a href="#travel">Travel Guide</a>
+        <a href="#about">About</a>
+    </nav>
+    <button id="themeToggle" class="theme-btn">🌙</button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="small-title">MAHARASHTRA • KONKAN COAST</span>
+        <h1>Discover the <span>Beaches of Maharashtra</span></h1>
+        <p>Explore peaceful shores, golden sands, clear waters and beautiful coastal villages along Maharashtra's Arabian Sea coast.</p>
+        <div class="hero-buttons">
+            <a href="#beaches" class="primary-btn">Explore Beaches</a>
+            <a href="#map-section" class="secondary-btn">View Beach Map</a>
+        </div>
+    </div>
+</section>
+
+<section class="intro" id="about">
+    <div class="intro-text">
+        <span class="section-tag">COASTAL MAHARASHTRA</span>
+        <h2>Where the Sahyadri meets the Arabian Sea</h2>
+        <p>Maharashtra's Konkan coastline is home to beautiful beaches, fishing villages, forts, temples and coastal culture. From the peaceful shores of Bordi to the turquoise waters of Tarkarli, every destination offers a different experience.</p>
+        <p>Plan your coastal journey with Aagman and discover beaches across Palghar, Raigad, Ratnagiri and Sindhudurg.</p>
+    </div>
+    <div class="intro-stats">
+        <div class="stat"><strong>19</strong><span>Featured Beaches</span></div>
+        <div class="stat"><strong>720 km</strong><span>Approx. Coastline</span></div>
+        <div class="stat"><strong>4</strong><span>Main Coastal Regions</span></div>
+    </div>
+</section>
+
+<section class="beaches-section" id="beaches">
+    <div class="section-heading">
+        <div>
+            <span class="section-tag">EXPLORE</span>
+            <h2>Beaches of Maharashtra</h2>
+            <p>Find your perfect coastal escape.</p>
+        </div>
+        <div class="search-box">
+            <input type="text" id="beachSearch" placeholder="Search beach...">
+        </div>
+    </div>
+
+    <div class="beach-grid" id="beachGrid">
+        <article class="beach-card">
+            <a href="beaches/anjarle.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlCHDOsQAOwdkrzQ-ZSasTPwIV0q_H993aLuVqgnh3dA&s=10" alt="Anjarle Beach"></a>
+            <div class="card-content">
+                <span class="location">RATNAGIRI</span>
+                <h3>Anjarle Beach</h3>
+                <p>A peaceful Konkan beach known for its natural surroundings and traditional coastal atmosphere.</p>
+                <button onclick="showBeach('Anjarle Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/arevare.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQfqZuMSSAi1cyqr3mjtAFWHG8_L1N_1lcWxNdSJp5ew&s=10" alt="Arevare Beach"></a>
+            <div class="card-content">
+                <span class="location">RATNAGIRI</span>
+                <h3>Arevare Beach</h3>
+                <p>A scenic coastal destination surrounded by green landscapes and the Arabian Sea.</p>
+                <button onclick="showBeach('Arevare Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/bhandarpule.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA0xrUsIHEj5xadVqDqKcxqFBAsyr-JE_hgvx9m6UzvA&s=10" alt="Bhandarpule Beach"></a>
+            <div class="card-content">
+                <span class="location">RATNAGIRI</span>
+                <h3>Bhandarpule Beach</h3>
+                <p>A quiet sandy beach close to Ratnagiri's beautiful coastal landscape.</p>
+                <button onclick="showBeach('Bhandarpule Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/bhogave.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJY9iaXFPGUBh573HvVmz5K-kkCUzVsBsbFgoM7o0KA&s=10" alt="Bhogave Beach"></a>
+            <div class="card-content">
+                <span class="location">SINDHUDURG</span>
+                <h3>Bhogave Beach</h3>
+                <p>A beautiful southern Konkan beach with a relaxed atmosphere and scenic coastal views.</p>
+                <<button onclick="showBeach('Bhogave Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/bordi.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ62HBrJDyAPphL48Lx_tQepu3AOBLL3dUHlFgzIaXynA&s=10" alt="Bordi Beach"></a>
+            <div class="card-content">
+                <span class="location">PALGHAR</span>
+                <h3>Bordi Beach</h3>
+                <p>A peaceful northern Maharashtra beach surrounded by chikoo orchards and coastal villages.</p>
+                <button onclick="showBeach('Bordi Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/diveagar.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlJfVnX0z_SDkSv7vkT4hsBUhrzP5186LCpBYsgRVsyQ&s" alt="Diveagar Beach"></a>
+            <div class="card-content">
+                <span class="location">RAIGAD</span>
+                <h3>Diveagar Beach</h3>
+                <p>A popular Konkan getaway with a long sandy shoreline and peaceful surroundings.</p>
+                <button onclick="showBeach('Diveagar Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/ganpatipule.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjou2sfbQxa3tbnkaeBJ57V8R4y8fb0bGKSWFYFTvsjw&s=10" alt="Ganpatipule Beach"></a>
+            <div class="card-content">
+                <span class="location">RATNAGIRI</span>
+                <h3>Ganpatipule Beach</h3>
+                <p>A famous coastal destination combining beach scenery with the spiritual atmosphere of Ganpatipule.</p>
+                <button onclick="showBeach('Ganpatipule Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/guhagar.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX4Ohix5AfEVVRR-TnzDzbKnVHxGOr4wfFba43NFAcDA&s=10" alt="Guhagar Beach"></a>
+            <div class="card-content">
+                <span class="location">RATNAGIRI</span>
+                <h3>Guhagar Beach</h3>
+                <p>A wide and peaceful beach known for its clean shoreline and calm Konkan surroundings.</p>
+                <button onclick="showBeach('Guhagar Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/harihareshwar.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrftXOrFPy8JBfdaRWQmI-wflDgSxq7stkQnNounR2UQ&s=10" alt="Harihareshwar Beach"></a>
+            <div class="card-content">
+                <span class="location">RAIGAD</span>
+                <h3>Harihareshwar Beach</h3>
+                <p>A scenic coastal destination known for its beach, temples and surrounding hills.</p>
+                <button onclick="showBeach('Harihareshwar Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/kashid.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLcAtBiCIs1U4FnOaFzJeUfwsA_ktffMoxPBMZNdqp0g&s=10" alt="Kashid Beach"></a>
+            <div class="card-content">
+                <span class="location">RAIGAD</span>
+                <h3>Kashid Beach</h3>
+                <p>A popular beach with wide sands, coastal greenery and views of the Arabian Sea.</p>
+                <button onclick="showBeach('Kashid Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/kunkeshwar.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfOd0d-Gd0u09p-J23z7Y25daXc5d22Xube9s5b-nVvA&s=10" alt="Kunkeshwar Beach"></a>
+            <div class="card-content">
+                <span class="location">SINDHUDURG</span>
+                <h3>Kunkeshwar Beach</h3>
+                <p>A beautiful coastal destination combining a sandy beach with a historic temple setting.</p>
+                <button onclick="showBeach('Kunkeshwar Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/murud.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmD3MHpm0hgENjdhwx5sbPq4JCZ_Tk5C7yW2PThJqCA&s=10" alt="Murud Beach"></a>
+            <div class="card-content">
+                <span class="location">RAIGAD</span>
+                <h3>Murud Beach</h3>
+                <p>A popular coastal destination near the historic Murud-Janjira region.</p>
+                <button onclick="showBeach('Murud Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/anjarle.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoqxuiRhlXgAwYJxa0Keo8CX33gKUmVquhnRXdZK8Xpg&s=10" alt="Nivati Beach"></a>
+            <div class="card-content">
+                <span class="location">SINDHUDURG</span>
+                <h3>Nivati Beach</h3>
+                <p>A peaceful southern Konkan beach offering scenic coastal views and a quieter atmosphere.</p>
+                <button onclick="showBeach('Nivati Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/anjarle.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7fpKYY3jpKg2lRw6j0eQx-E9EnUjYKHEtQE1n2peCPg&s=10" alt="Sagareshwar Beach"></a>
+            <div class="card-content">
+                <span class="location">SINDHUDURG</span>
+                <h3>Sagareshwar Beach</h3>
+                <p>A coastal destination listed among Maharashtra Tourism's featured beaches.</p>
+                <button onclick="showBeach('Sagareshwar Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/anjarle.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUVlZ2h1CIpcRrs-cl2JnCzsVUuESox657q9w0XpClAw&s=10" alt="Satpati Beach"></a>
+            <div class="card-content">
+                <span class="location">PALGHAR</span>
+                <h3>Satpati Beach</h3>
+                <p>A coastal destination connected with the traditional fishing culture of Palghar.</p>
+                <button onclick="showBeach('Satpati Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/anjarle.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQWIMX2UZlEVHWCyI4pPtzKWsVDiv2KangSATgzciGhw&s=10" alt="Shrivardhan Beach"></a>
+            <div class="card-content">
+                <span class="location">RAIGAD</span>
+                <h3>Shrivardhan Beach</h3>
+                <p>A long coastal stretch surrounded by coconut trees and beautiful Konkan scenery.</p>
+                <button onclick="showBeach('Shrivardhan Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/anjarle.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_KUrKufljmbxNv2Ja5EkpGadoKkbpJ47tKDNdbOR5xQ&s=10" alt="Tarkarli Beach"></a>
+            <div class="card-content">
+                <span class="location">SINDHUDURG</span>
+                <h3>Tarkarli Beach</h3>
+                <p>Famous for its beautiful coastline, clear waters and coastal experiences.</p>
+                <button onclick="showBeach('Tarkarli Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/anjarle.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiNP2fq4lBM7ShjMYbShp2hqd0VxwfGmvmqYAzosKvNw&s=10" alt="Velneshwar Beach"></a>
+            <div class="card-content">
+                <span class="location">RATNAGIRI</span>
+                <h3>Velneshwar Beach</h3>
+                <p>A tranquil beach destination surrounded by greenery and traditional Konkan landscapes.</p>
+                <button onclick="showBeach('Velneshwar Beach')">Explore →</button>
+            </div>
+        </article>
+
+        <article class="beach-card">
+            <a href="beaches/anjarle.html"></a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaBJdWEzi3gjK7RI1T9_qQXJ14CMidWxQK-xUZbfG8JQ&s=10" alt="Vengurla Beach">
+            <div class="card-content">
+                <span class="location">SINDHUDURG</span>
+                <h3>Vengurla Beach</h3>
+                <p>A scenic southern Konkan beach known for its natural beauty and coastal landscape.</p>
+                <button onclick="showBeach('Vengurla Beach')">Explore →</button>
+            </div>
+        </article>
+    </div>
+
+    <p id="noResults" class="no-results">No beach found.</p>
+</section>
+
+<section class="map-section" id="map-section">
+    <div class="map-heading">
+        <span class="section-tag">PLAN YOUR JOURNEY</span>
+        <h2>Find Maharashtra's Beaches</h2>
+        <p>Explore coastal locations on Google Maps.</p>
+    </div>
+    
+    <div id="googleMapContainer">
+        <iframe 
+            id="googleMap" 
+            src="https://maps.google.com/maps?q=Beaches+of+Maharashtra&t=&z=8&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<section class="travel-section" id="travel">
+    <span class="section-tag">TRAVEL GUIDE</span>
+    <h2>Make Your Beach Trip Better</h2>
+    <div class="travel-grid">
+        <div class="travel-card">
+            <div class="travel-icon">🌅</div>
+            <h3>Best Experience</h3>
+            <p>Enjoy sunrise and sunset walks while exploring the natural beauty of the Konkan coast.</p>
+        </div>
+        <div class="travel-card">
+            <div class="travel-icon">🗺️</div>
+            <h3>Plan Your Route</h3>
+            <p>Use the beach map to identify nearby destinations and create a practical coastal route.</p>
+        </div>
+        <div class="travel-card">
+            <div class="travel-icon">🌴</div>
+            <h3>Respect Nature</h3>
+            <p>Keep beaches clean, avoid littering and respect local communities and coastal ecosystems.</p>
+        </div>
+        <div class="travel-card">
+            <div class="travel-icon">📸</div>
+            <h3>Capture Memories</h3>
+            <p>Explore coastal landscapes, villages, forts and local culture along your journey.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-logo">
+        <strong>Aagman</strong>
+        <span>Discover Maharashtra</span>
+    </div>
+    <p>Promoting Maharashtra's natural beauty, culture and tourism.</p>
+    <p class="copyright">© 2026 Aagman • Maharashtra Tourism</p>
+</footer>
+
+<script src="branch3.js"></script>
+</body>
+</html>

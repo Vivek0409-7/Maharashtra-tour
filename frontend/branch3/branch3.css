@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #fffaf0;
+    --card: #ffffff;
+    --text: #252525;
+    --muted: #666;
+    --orange: #f58213;
+    --yellow: #ffca52;
+    --nav: #fff4d0;
+    --border: #eadfca;
+    --shadow: 0 12px 35px rgba(0,0,0,.08);
+}
+
+body.dark {
+    --bg: #111315;
+    --card: #1b1e21;
+    --text: #f4f4f4;
+    --muted: #b8b8b8;
+    --nav: #191b1e;
+    --border: #333;
+    --shadow: 0 12px 35px rgba(0,0,0,.35);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: .3s;
+}
+
+.navbar {
+    height: 82px;
+    background: var(--nav);
+    display: flex;
+    align-items: center;
+    padding: 0 4.2%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #f1b95a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.logo-img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-name {
+    color: var(--orange);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 34px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+.theme-btn {
+    margin-left: 25px;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--card);
+    color: var(--text);
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+.menu-btn {
+    display: none;
+}
+
+.hero {
+    min-height: 620px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS403GiQRvSR42dsEmMGH9eAODraWUxL8AeeGxQJu7wQQ&s=10");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.30), rgba(0,0,0,.05));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    color: white;
+}
+
+.small-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ffd166;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: 1.05;
+    margin: 20px 0;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #ffc34d;
+}
+
+.hero p {
+    max-width: 650px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 32px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.primary-btn {
+    background: var(--orange);
+    color: white;
+}
+
+.secondary-btn {
+    border: 1px solid white;
+    color: white;
+}
+
+.intro {
+    padding: 90px 9%;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.section-tag {
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.intro h2,
+.map-heading h2,
+.travel-section h2,
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    margin: 12px 0 20px;
+}
+
+.intro p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.intro-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 28px 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.stat strong {
+    display: block;
+    color: var(--orange);
+    font-size: 28px;
+}
+
+.stat span {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.beaches-section {
+    padding: 90px 6%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+.search-box input {
+    width: 270px;
+    padding: 14px 18px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    outline: none;
+    background: var(--card);
+    color: var(--text);
+    font-family: inherit;
+}
+
+.beach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.beach-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: .3s;
+}
+
+.beach-card:hover {
+    transform: translateY(-8px);
+}
+
+.beach-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.location {
+    font-size: 10px;
+    color: var(--orange);
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.card-content h3 {
+    margin: 8px 0;
+    font-size: 21px;
+}
+
+.card-content p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 67px;
+}
+
+.card-content button {
+    margin-top: 15px;
+    border: none;
+    background: none;
+    color: var(--orange);
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    color: var(--muted);
+    padding: 50px;
+}
+
+.map-section {
+    padding: 90px 6%;
+    background: var(--card);
+}
+
+.map-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+}
+
+.map-heading p {
+    color: var(--muted);
+}
+
+#googleMapContainer {
+    height: 600px;
+    margin-top: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    width: 100%;
+}
+
+body.dark #googleMapContainer iframe {
+    filter: brightness(.8) contrast(1.1);
+}
+
+.travel-section {
+    padding: 90px 6%;
+    text-align: center;
+}
+
+.travel-grid {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.travel-card {
+    text-align: left;
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.travel-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.travel-card h3 {
+    margin-bottom: 10px;
+}
+
+.travel-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+footer {
+    background: #171717;
+    color: white;
+    padding: 55px 7%;
+}
+
+.footer-logo strong {
+    display: block;
+    color: #ff9b21;
+    font-size: 30px;
+}
+
+.footer-logo span {
+    color: #aaa;
+}
+
+footer p {
+    color: #aaa;
+    margin-top: 15px;
+}
+
+.copyright {
+    font-size: 12px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+@media(max-width: 1000px) {
+    nav { gap: 15px; }
+    .beach-grid, .travel-grid { grid-template-columns: repeat(2, 1fr); }
+    .intro { grid-template-columns: 1fr; }
+}
+
+@media(max-width: 750px) {
+    .navbar { height: 70px; }
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        padding: 25px;
+        background: var(--nav);
+        flex-direction: column;
+        border-bottom: 1px solid var(--border);
+    }
+    nav.active { display: flex; }
+    .menu-btn {
+        display: block;
+        margin-left: 10px;
+        border: none;
+        background: none;
+        color: var(--text);
+        font-size: 25px;
+    }
+    .theme-btn { margin-left: 10px; }
+    .brand-name { font-size: 23px; }
+    .logo-box { width: 43px; height: 43px; }
+    .hero { min-height: 550px; padding: 60px 7%; }
+    .hero h1 { font-size: 46px; }
+    .section-heading { display: block; }
+    .search-box { margin-top: 20px; }
+    .search-box input { width: 100%; }
+    .beach-grid, .travel-grid, .intro-stats { grid-template-columns: 1fr; }
+    #googleMapContainer { height: 450px; }
+}

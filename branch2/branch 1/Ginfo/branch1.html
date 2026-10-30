@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aagman - Maharashtra Cultural & Heritage Tourism</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="branchstyle.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#" class="logo">
+        <img src="FEP logo.png" alt="Aagman Logo" class="logo-img"> 
+        <span class="brand-name">Aagman</span>
+    </a>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#forts">Forts & Hills</a>
+        <a href="#map-section">Map</a>
+        <a href="#travel">Travel Guide</a>
+    </nav>
+    <button id="themeToggle" class="theme-btn">🌙</button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+</header>
+
+<section class="hero-slider" id="home">
+    <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://th-i.thgim.com/public/incoming/j7v2px/article69565071.ece/alternates/LANDSCAPE_1200/PTI05_11_2025_000178B.jpg');">
+        <div class="slide-content">
+            <h2>Experiences Of Maharashtra</h2>
+        </div>
+    </div>
+
+    <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://s7ap1.scene7.com/is/image/incredibleindia/1-pratapgarh-fort-mahabaleshwar-maharashtra-2-city-hero?qlt=82&ts=1726668937680');">
+        <div class="slide-content">
+            <h2>Experiences Of Maharashtra</h2>
+        </div>
+    </div>
+
+    <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPVZ0J4JbQfivL9QHEi2t7sHKBZ233s68izThAUoOjLPtVoL7pKwcBVo&s=10');">
+        <div class="slide-content">
+            <h2>Experiences Of Maharashtra</h2>
+        </div>
+    </div>
+
+    <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<section class="intro" id="about">
+    <div class="intro-text">
+        <span class="section-tag">HERITAGE MAHARASHTRA</span>
+        <h2>Where History Meets the Sahyadri Ranges</h2>
+        <p>The historic forts and majestic hills of Maharashtra stand as architectural marvels, deeply embedded in the rich socio-cultural fabric of the region. Strategically positioned across the Sahyadri mountains and Konkan coast, they preserve timeless tales of valor.</p>
+        <p>Explore centuries of Maratha legacy, majestic hill stations, and vibrant trekking destinations across Pune, Raigad, Satara, and Sindhudurg.</p>
+    </div>
+
+    <div class="intro-stats">
+        <div class="stat">
+            <strong>350+</strong>
+            <span>Historic Forts</span>
+        </div>
+        <div class="stat">
+            <strong>1,646 m</strong>
+            <span>Highest Peak</span>
+        </div>
+        <div class="stat">
+            <strong>6</strong>
+            <span>Key Divisions</span>
+        </div>
+    </div>
+</section>
+
+<section class="beaches-section" id="forts">
+    <div class="section-heading">
+        <div>
+            <span class="section-tag">EXPLORE</span>
+            <h2>Forts & Hills of Maharashtra</h2>
+            <p>Find your next historical adventure or hill retreat.</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="fortSearch" placeholder="Search fort or hill...">
+        </div>
+    </div>
+
+    <div class="filter-tabs">
+        <button class="tab-btn active" data-category="all">All</button>
+        <button class="tab-btn" data-category="fort">Forts</button>
+        <button class="tab-btn" data-category="hill">Hills</button>
+    </div>
+
+    <div class="beach-grid" id="fortGrid"></div>
+
+    <p id="noResults" class="no-results">No destination found.</p>
+</section>
+
+<section class="map-section" id="map-section">
+    <div class="map-heading">
+        <span class="section-tag">PLAN YOUR JOURNEY</span>
+        <h2>Find Maharashtra's Forts & Hills</h2>
+        <p>Explore historic strongholds and hill stations on Google Maps.</p>
+    </div>
+
+    <div id="googleMapContainer">
+        <iframe 
+            id="googleMap" 
+            src="https://maps.google.com/maps?q=Forts+and+Hills+in+Maharashtra&t=&z=7&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<section class="travel-section" id="travel">
+    <span class="section-tag">TRAVEL GUIDE</span>
+    <h2>Make Your Heritage Trip Better</h2>
+
+    <div class="travel-grid">
+        <div class="travel-card">
+            <div class="travel-icon">🏰</div>
+            <h3>Historical Valor</h3>
+            <p>Discover military architecture and Maratha history preserved across rugged peaks.</p>
+        </div>
+
+        <div class="travel-card">
+            <div class="travel-icon">🥾</div>
+            <h3>Trekking Routes</h3>
+            <p>Plan safe routes and gear up appropriately for monsoon and winter trekking.</p>
+        </div>
+
+        <div class="travel-card">
+            <div class="travel-icon">🌲</div>
+            <h3>Preserve Eco-Systems</h3>
+            <p>Respect wildlife, avoid littering, and protect sacred fort monuments.</p>
+        </div>
+
+        <div class="travel-card">
+            <div class="travel-icon">📸</div>
+            <h3>Scenic Vistas</h3>
+            <p>Capture panoramic Sahyadri views, sunrise points, and misty mountain valleys.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-logo">
+        <strong>Aagman</strong>
+        <span>Discover Maharashtra</span>
+    </div>
+    <p>Promoting Maharashtra's natural beauty, heritage, and cultural tourism.</p>
+    <p class="copyright">© 2026 Aagman • Maharashtra Tourism</p>
+</footer>
+
+<script src="branchscript.js"></script>
+</body>
+</html>
