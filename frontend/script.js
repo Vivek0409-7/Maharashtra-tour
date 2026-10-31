@@ -1,4 +1,7 @@
-const API_BASE_URL = "http://localhost:5000/api";
+// Use backend only when running locally; on Vercel, fall back to localStorage
+const API_BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://localhost:5000/api'
+    : null;
 
 let selectedCategory = 'Heritage Tour';
 let activeUserSession = JSON.parse(localStorage.getItem('aagman_active_session') || 'null');
@@ -86,58 +89,88 @@ async function handleUserRegister(e) {
     const email = document.getElementById('regEmail').value.trim().toLowerCase();
     const password = document.getElementById('regPassword').value;
 
-    try {
-        const res = await fetch(`${API_BASE_URL}/auth/register`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, password })
-        });
-        const data = await res.json();
-
-        if (!res.ok) {
-            triggerToast('Registration Error', data.message || 'Registration failed');
+    // If backend is available (localhost), try it first
+    if (API_BASE_URL) {
+        try {
+            const res = await fetch(`${API_BASE_URL}/auth/register`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, password })
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                triggerToast('Registration Error', data.message || 'Registration failed');
+                return;
+            }
+            activeUserSession = data.user;
+            localStorage.setItem('aagman_active_session', JSON.stringify(activeUserSession));
+            localStorage.setItem('aagman_token', data.token);
+            triggerToast('Account Created!', `Welcome to Aagman, ${name}.`);
+            checkUserSession();
             return;
+        } catch (err) {
+            console.warn('Backend unavailable, using localStorage fallback.');
         }
-
-        activeUserSession = data.user;
-        localStorage.setItem('aagman_active_session', JSON.stringify(activeUserSession));
-        localStorage.setItem('aagman_token', data.token);
-
-        triggerToast('Account Created!', `Welcome to Aagman, ${name}.`);
-        checkUserSession();
-    } catch (err) {
-        triggerToast('Network Error', 'Unable to reach backend server.');
     }
+
+    // localStorage fallback (used on Vercel where no backend is deployed)
+    const users = JSON.parse(localStorage.getItem('aagman_users') || '[]');
+    if (users.find(u => u.email === email)) {
+        triggerToast('Already Registered', 'This email is already in use. Please login.');
+        return;
+    }
+    const newUser = { id: Date.now().toString(), name, email, password };
+    users.push(newUser);
+    localStorage.setItem('aagman_users', JSON.stringify(users));
+    activeUserSession = { id: newUser.id, name, email };
+    localStorage.setItem('aagman_active_session', JSON.stringify(activeUserSession));
+    triggerToast('Account Created!', `Welcome to Aagman, ${name}.`);
+    checkUserSession();
 }
+
 
 async function handleUserLogin(e) {
     e.preventDefault();
     const email = document.getElementById('loginEmail').value.trim().toLowerCase();
     const password = document.getElementById('loginPassword').value;
 
-    try {
-        const res = await fetch(`${API_BASE_URL}/auth/login`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
-        });
-        const data = await res.json();
-
-        if (!res.ok) {
-            triggerToast('Authentication Failed', data.message || 'Invalid credentials');
+    // If backend is available (localhost), try it first
+    if (API_BASE_URL) {
+        try {
+            const res = await fetch(`${API_BASE_URL}/auth/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                triggerToast('Authentication Failed', data.message || 'Invalid credentials');
+                return;
+            }
+            activeUserSession = data.user;
+            localStorage.setItem('aagman_active_session', JSON.stringify(activeUserSession));
+            localStorage.setItem('aagman_token', data.token);
+            triggerToast('Welcome Back!', `Signed in as ${data.user.name}.`);
+            checkUserSession();
             return;
+        } catch (err) {
+            console.warn('Backend unavailable, using localStorage fallback.');
         }
-
-        activeUserSession = data.user;
-        localStorage.setItem('aagman_active_session', JSON.stringify(activeUserSession));
-        localStorage.setItem('aagman_token', data.token);
-
-        triggerToast('Welcome Back!', `Signed in as ${data.user.name}.`);
-        checkUserSession();
-    } catch (err) {
-        triggerToast('Network Error', 'Unable to reach backend server.');
     }
+
+    // localStorage fallback
+    const users = JSON.parse(localStorage.getItem('aagman_users') || '[]');
+    const user = users.find(u => u.email === email && u.password === password);
+    if (!user) {
+        triggerToast('Login Failed', 'Email or password incorrect. Please check and try again.');
+        return;
+    }
+    activeUserSession = { id: user.id, name: user.name, email: user.email };
+    localStorage.setItem('aagman_active_session', JSON.stringify(activeUserSession));
+    triggerToast('Welcome Back!', `Signed in as ${user.name}.`);
+    checkUserSession();
 }
+
 
 function handleUserLogout() {
     activeUserSession = null;
@@ -154,85 +187,134 @@ function selectTopic(chipElement) {
 }
 
 async function handleGenerateAiPlan(e) {
-    if (e) e.preventDefault(); // Stop page from refreshing or freezing form submit
+    if (e) e.preventDefault();
 
     const submitBtn = document.getElementById('submitBtn');
     if (!submitBtn) return;
     
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Consulting Gemini AI Backend...`;
+    submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Generating itinerary...`;
 
     const travelers = document.getElementById('travelers')?.value || '';
     const date = document.getElementById('travelDate')?.value || '';
     const preferences = document.getElementById('messageText')?.value || '';
 
-    try {
-        const res = await fetch(`${API_BASE_URL}/planner/generate`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                circuit: selectedCategory,
-                travelers: travelers,
-                date: date,
-                preferences: preferences
-            })
-        });
-
-        const result = await res.json();
-        
-        if (res.ok) {
-            triggerToast('AI Plan Generated!', 'Custom itinerary created successfully.');
-            await renderUserSavedJourneys();
-            const form = document.getElementById('journeyPlannerForm');
-            if (form) form.reset();
-        } else {
-            console.error('Server error:', result);
-            triggerToast('Error', result.message || 'Failed to generate itinerary.');
+    // If backend is available, try it
+    if (API_BASE_URL) {
+        try {
+            const res = await fetch(`${API_BASE_URL}/planner/generate`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ circuit: selectedCategory, travelers, date, preferences })
+            });
+            const result = await res.json();
+            if (res.ok) {
+                triggerToast('AI Plan Generated!', 'Custom itinerary created successfully.');
+                await renderUserSavedJourneys();
+                const form = document.getElementById('journeyPlannerForm');
+                if (form) form.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `Generate AI Custom Itinerary <i class="fa-solid fa-wand-magic-sparkles"></i>`;
+                return;
+            }
+        } catch (err) {
+            console.warn('Backend unavailable, generating local itinerary.');
         }
-    } catch (err) {
-        console.error('Fetch error:', err);
-        triggerToast('Network Error', 'Backend request failed.');
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = `Generate AI Custom Itinerary <i class="fa-solid fa-wand-magic-sparkles"></i>`;
     }
+
+    // localStorage fallback — generate a sample itinerary client-side
+    const itinerary = generateLocalItinerary(selectedCategory, travelers, date, preferences);
+    const journeys = JSON.parse(localStorage.getItem('aagman_saved_journeys') || '[]');
+    journeys.unshift({ id: Date.now().toString(), circuit: selectedCategory, travelers, date, preferences, itinerary, createdAt: new Date().toISOString() });
+    localStorage.setItem('aagman_saved_journeys', JSON.stringify(journeys));
+
+    triggerToast('Itinerary Created!', 'Your custom Maharashtra travel plan is ready.');
+    renderUserSavedJourneys();
+    const form = document.getElementById('journeyPlannerForm');
+    if (form) form.reset();
+
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = `Generate AI Custom Itinerary <i class="fa-solid fa-wand-magic-sparkles"></i>`;
 }
+
+function generateLocalItinerary(circuit, travelers, date, preferences) {
+    const places = {
+        'Heritage Tour': ['Raigad Fort', 'Shivneri Fort', 'Pratapgad Fort'],
+        'Spiritual': ['Shirdi Sai Baba Temple', 'Siddhivinayak Temple', 'Trimbakeshwar Jyotirlinga'],
+        'Adventure': ['Lonavala', 'Mahabaleshwar', 'Igatpuri'],
+        'Beaches': ['Alibaug Beach', 'Ganpatipule Beach', 'Tarkarli Beach'],
+        'Wildlife': ['Tadoba Tiger Reserve', 'Navegaon National Park', 'Melghat Tiger Reserve'],
+    };
+    const spots = places[circuit] || ['Mumbai', 'Pune', 'Nashik'];
+    return `✨ Your Custom Maharashtra Itinerary — ${circuit}
+Travelers: ${travelers || 'N/A'} | Travel Date: ${date || 'N/A'}
+${preferences ? 'Preferences: ' + preferences : ''}
+
+Day 1 — Arrival & ${spots[0]}
+• Arrive, check-in to hotel
+• Visit ${spots[0]} (guided tour available)
+• Evening local cuisine dinner
+
+Day 2 — Explore ${spots[1]}
+• Morning visit to ${spots[1]}
+• Afternoon sightseeing & photography
+• Cultural show in the evening
+
+Day 3 — ${spots[2]} & Departure
+• Early morning visit to ${spots[2]}
+• Shopping for local handicrafts
+• Depart with memories to cherish
+
+💡 Tip: Book accommodations in advance during peak season (Oct–Feb).`;
+}
+
 
 async function renderUserSavedJourneys() {
     const container = document.getElementById('savedJourneysList');
     if (!container) return;
 
-    try {
-        const res = await fetch(`${API_BASE_URL}/planner/saved`);
-        const journeys = await res.json();
-
-        if (!journeys || journeys.length === 0) {
-            container.innerHTML = `<p style="color: var(--text-muted); font-size: 0.9rem;">No custom plans yet. Fill in your preferences and click Generate!</p>`;
+    // Try backend if available
+    if (API_BASE_URL) {
+        try {
+            const res = await fetch(`${API_BASE_URL}/planner/saved`);
+            const journeys = await res.json();
+            displayJourneys(container, journeys);
             return;
+        } catch (err) {
+            console.warn('Backend unavailable, loading from localStorage.');
         }
-
-        container.innerHTML = journeys.map(j => `
-            <div class="journey-card" style="background: var(--card-bg, #fff); padding: 1rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1);">
-                <div class="journey-card-top" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                    <span class="journey-badge" style="background: var(--primary, #e65100); color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">${j.circuit}</span>
-                    <span class="journey-ref" style="font-size: 0.75rem; color: #888;">${new Date(j.createdAt || Date.now()).toLocaleDateString()}</span>
-                </div>
-                <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
-                    <strong>Travelers:</strong> ${j.travelers || 'N/A'} | <strong>Date:</strong> ${j.date || 'N/A'}
-                </div>
-                ${j.preferences ? `<p style="font-size: 0.85rem; color: var(--secondary); font-style: italic; margin-bottom: 0.6rem;">
-                    <strong>Your Preferences:</strong> "${j.preferences}"
-                </p>` : ''}
-                <div class="ai-generated-plan" style="white-space: pre-line; font-size: 0.9rem; line-height: 1.5; color: var(--text-main);">
-                    ${j.itinerary}
-                </div>
-            </div>
-        `).join('');
-    } catch (err) {
-        console.error("Fetch Saved Journeys Error:", err);
-        container.innerHTML = `<p style="color: var(--text-muted); font-size: 0.9rem;">Failed to load saved journeys.</p>`;
     }
+
+    // localStorage fallback
+    const journeys = JSON.parse(localStorage.getItem('aagman_saved_journeys') || '[]');
+    displayJourneys(container, journeys);
 }
+
+function displayJourneys(container, journeys) {
+    if (!journeys || journeys.length === 0) {
+        container.innerHTML = `<p style="color: var(--text-muted); font-size: 0.9rem;">No custom plans yet. Fill in your preferences and click Generate!</p>`;
+        return;
+    }
+
+    container.innerHTML = journeys.map(j => `
+        <div class="journey-card" style="background: var(--card-bg, #fff); padding: 1rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1);">
+            <div class="journey-card-top" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <span class="journey-badge" style="background: var(--primary, #e65100); color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">${j.circuit}</span>
+                <span class="journey-ref" style="font-size: 0.75rem; color: #888;">${new Date(j.createdAt || Date.now()).toLocaleDateString()}</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+                <strong>Travelers:</strong> ${j.travelers || 'N/A'} | <strong>Date:</strong> ${j.date || 'N/A'}
+            </div>
+            ${j.preferences ? `<p style="font-size: 0.85rem; color: var(--secondary); font-style: italic; margin-bottom: 0.6rem;">
+                <strong>Your Preferences:</strong> "${j.preferences}"
+            </p>` : ''}
+            <div class="ai-generated-plan" style="white-space: pre-line; font-size: 0.9rem; line-height: 1.5; color: var(--text-main);">
+                ${j.itinerary}
+            </div>
+        </div>
+    `).join('');
+}
+
 
 document.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.shiftKey && (e.key === 'D' || e.key === 'd')) {
