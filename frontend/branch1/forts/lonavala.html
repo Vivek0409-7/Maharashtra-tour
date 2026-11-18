@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lonavala & Khandala | Twin Sahyadri Monsoon Jewels</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Lonavala & Khandala</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
+                        <span class="arrow">&larr;</span> Back to All Forts & Hills
+                    </a>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Full-Width Hero Carousel Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273453_lonavala_1.jpg');">
+            <div class="slide-content">
+                <h2>Lonavala & Khandala</h2>
+                <p>Heritage & Cultural Wonders of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Lonavala_Western_Ghats.jpg/1280px-Lonavala_Western_Ghats.jpg');">
+            <div class="slide-content">
+                <h2>Lonavala & Khandala</h2>
+                <p>Timeless Splendor of the Western Ghats</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Bhushi_Dam_Lonavala.jpg/1280px-Bhushi_Dam_Lonavala.jpg');">
+            <div class="slide-content">
+                <h2>Lonavala & Khandala</h2>
+                <p>Majestic Destinations of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section container">
+            <h2>Overview</h2>
+            <p><strong>Lonavala and Khandala</strong> are the twin hill resorts of the Sahyadri mountains, perched gracefully at an elevation of 625 metres along the Mumbai-Pune corridor. Blessed with lush cascading green valleys, mist-shrouded peaks, and roaring monsoon waterfalls, they are the most accessible and popular hill getaways in Western India.<br><br>Beyond their natural beauty and the famous sweet confection called <strong>Chikki</strong>, the region holds rich 2,000-year-old historical treasures. Here lie the magnificent rock-cut Buddhist chaitya complexes of <strong>Karla Caves and Bhaja Caves</strong>, alongside Maratha hill forts like Rajmachi, Visapur, and Lohagad.</p>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section container">
+            <h2>Historical Highlights</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273453_lonavala_1.jpg" alt="Karla Caves Chaitya" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>2,000-Year-Old Buddhist Sanctuaries</h3>
+                        <p>Carved during the 2nd century BCE, Karla Caves boast the largest and best-preserved rock-cut Buddhist Chaitya hall in India, featuring soaring teak wood ribbed ceilings and intricately carved elephant pillars.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Lonavala_Western_Ghats.jpg/1280px-Lonavala_Western_Ghats.jpg" alt="Khandala Ghat & Railways" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Bhor Ghat Railway Wonder</h3>
+                        <p>The challenging Bhor Ghat connecting Mumbai to the Deccan Plateau was a milestone engineering feat opened in 1863, conquering 25 tunnels and dramatic mountain inclines.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Bhushi_Dam_Lonavala.jpg/1280px-Bhushi_Dam_Lonavala.jpg" alt="Bhushi Dam Cascades" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Monsoon Tourism & Chikki Heritage</h3>
+                        <p>Every monsoon, tens of thousands flock to Bhushi Dam's overflowing steps and waterfalls, while the heritage bazaars offer dozens of varieties of crunchy nut chikki and fudge.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section container">
+            <h2>Major Attractions</h2>
+            <div class="table-responsive">
+                <table class="attractions-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Tiger's Leap & Lion's Point</strong></td>
+                            <td>Sheer cliff lookouts with 650m drop-offs delivering wind blasts and cloud sweeps.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bhushi Dam & Pavana Dam</strong></td>
+                            <td>Famous overflow steps and vast scenic backwaters for camping and water sports.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Karla Caves & Bhaja Caves</strong></td>
+                            <td>Ancient 2nd-century BCE rock-hewn Buddhist shrines with grand stupas and monasteries.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Duke's Nose (Nagphani Cliff)</strong></td>
+                            <td>Pointing rock cliff resembling the Duke of Wellington's nose, popular for rappelling.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kune Falls & Kataldhar Falls</strong></td>
+                            <td>Stunning multi-tiered 200-metre cascades plunging down the Khandala valley.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lonavala Bazaar & Chikki Emporiums</strong></td>
+                            <td>Vibrant town center offering authentic peanut, cashew, and rose petal chikki.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visitor Info & Interactive Route Selector -->
+        <section id="visitor-info" class="section container">
+            <h2>Essential Visitor Information</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Category:</strong> Hill</li>
+                    <li><strong>Location:</strong> Pune District, Western Ghats, Maharashtra</li>
+                    <li><strong>Elevation:</strong> 625 metres (2,050 ft) above sea level</li>
+                    <li><strong>Best Time to Visit:</strong> Year-Round (Spectacular June-September monsoon waterfalls)</li>
+                    <li><strong>Entry Timings:</strong> Open 24 Hours</li>
+                </ul>
+                <div class="interactive-card">
+                    <h3>Plan Your Visit & Ascent</h3>
+                    <p>Choose your preferred mode of reaching Lonavala & Khandala:</p>
+                    <div class="mode-buttons">
+
+                        <button class="mode-btn active" data-mode="route1" data-desc="Difficulty: Express Highway | Approx. Time: 1.5 hours (85 km) from Mumbai or 1 hour (65 km) from Pune via the Mumbai-Pune Expressway.">Mumbai-Pune Expressway</button>
+                        <button class="mode-btn" data-mode="route2" data-desc="Difficulty: Rail Connectivity | Approx. Time: 2 hours by central railway express train or suburban local train halting directly at Lonavala station.">Direct Train to Lonavala</button>
+                        <button class="mode-btn" data-mode="route3" data-desc="Difficulty: Scenic Mountain Road | Approx. Time: Drive along the old Mumbai-Pune Highway (NH 48) through winding Khandala ghat passes.">Old NH 48 Ghat Route</button>
+                    </div>
+                    <p id="mode-description" class="mode-desc">Difficulty: Express Highway | Approx. Time: 1.5 hours (85 km) from Mumbai or 1 hour (65 km) from Pune via the Mumbai-Pune Expressway.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="section container">
+            <h2>Location & Route Map</h2>
+            <div class="streetview">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Lonavala+Maharashtra&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Lonavala & Khandala Heritage Project • Maharashtra Tourism Portal. Preserving history for generations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

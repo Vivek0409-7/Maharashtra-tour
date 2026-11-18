@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratapgad Fort | The Citadel of Maratha Valor</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Pratapgad Fort</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
+                        <span class="arrow">&larr;</span> Back to All Forts & Hills
+                    </a>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Full-Width Hero Carousel Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273376_pratapgad_fort_1.jpg');">
+            <div class="slide-content">
+                <h2>Pratapgad Fort</h2>
+                <p>Heritage & Cultural Wonders of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://s7ap1.scene7.com/is/image/incredibleindia/1-pratapgarh-fort-mahabaleshwar-maharashtra-2-city-hero?qlt=82&ts=1726668937680');">
+            <div class="slide-content">
+                <h2>Pratapgad Fort</h2>
+                <p>Timeless Splendor of the Western Ghats</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Pratapgad_fort_02.jpg/1280px-Pratapgad_fort_02.jpg');">
+            <div class="slide-content">
+                <h2>Pratapgad Fort</h2>
+                <p>Majestic Destinations of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section container">
+            <h2>Overview</h2>
+            <p><strong>Pratapgad Fort</strong> is a commanding mountain fortress situated in the Satara district of Maharashtra, approximately 24 kilometres from the hill station of Mahabaleshwar. Commissioned by <strong>Chhatrapati Shivaji Maharaj</strong> and constructed in 1656 by Prime Minister Moropant Trimbak Pingle, the fort was strategically built to control the vital Radtondi mountain pass and protect the banks of the Nira and Koyna rivers.<br><br>Pratapgad holds an immortal chapter in Maratha history as the battleground of the famed <strong>Battle of Pratapgad in 1659</strong>, in which Shivaji Maharaj met and famously vanquished the formidable Bijapuri general Afzal Khan. Divided into the upper fort (balekilla) and the lower fort, Pratapgad features intact bastions, royal temples, and deep forested slopes.</p>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section container">
+            <h2>Historical Highlights</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273376_pratapgad_fort_1.jpg" alt="Pratapgad Battlegrounds" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Duel with Afzal Khan (1659)</h3>
+                        <p>Afzal Khan sought to crush the nascent Maratha kingdom. Shivaji Maharaj met him in a diplomatic tent on the slopes of Pratapgad and countered Khan's deceitful ambush using concealed tiger claws (wagh nakh), securing an epochal victory.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Pratapgad_fort_02.jpg/1280px-Pratapgad_fort_02.jpg" alt="Bhavani Mata Temple" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Goddess Bhavani Temple</h3>
+                        <p>Shivaji Maharaj consecrated a sacred temple dedicated to Goddess Bhavani inside the lower fort, bringing a sacred crystal Shivalinga and Bhavani idol, where royal ceremonies and daily rituals were solemnly held.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/1-pratapgarh-fort-mahabaleshwar-maharashtra-2-city-hero?qlt=82&ts=1726668937680" alt="Upper Fort Citadel" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Fortress Architecture</h3>
+                        <p>Engineered with dual ramparts, the upper fort crowns a sharp ridge housing the Kedareshwar temple while the lower fort contains extensive defensive bastions commanding the vast valleys of Mahabaleshwar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section container">
+            <h2>Major Attractions</h2>
+            <div class="table-responsive">
+                <table class="attractions-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Bhavani Mata Temple</strong></td>
+                            <td>A revered temple dedicated to Goddess Bhavani, preserving traditional Maratha stone craftsmanship.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Afzal Khan's Tomb & Monument</strong></td>
+                            <td>Historical tomb marking the location of the 1659 historic encounter at the foothills.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mahadarwaza (Grand Main Gate)</strong></td>
+                            <td>Massive iron-spiked wooden gate designed to deflect battering rams and elephant charges.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Equestrian Statue of Shivaji Maharaj</strong></td>
+                            <td>Magnificent bronze equestrian statue of Chhatrapati Shivaji Maharaj unveiled in 1957 by Jawaharlal Nehru.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kedareshwar Temple & Rahat Lake</strong></td>
+                            <td>Peaceful temple atop the upper fort overlooking pristine freshwater lakes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Redoubt Bastion (Yashwant Buruj)</strong></td>
+                            <td>Strategic military bastion delivering a breathtaking view of the Koyna River basin.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visitor Info & Interactive Route Selector -->
+        <section id="visitor-info" class="section container">
+            <h2>Essential Visitor Information</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Category:</strong> Fort</li>
+                    <li><strong>Location:</strong> Satara District (near Mahabaleshwar), Maharashtra</li>
+                    <li><strong>Elevation:</strong> 1,080 metres (3,540 ft) above sea level</li>
+                    <li><strong>Best Time to Visit:</strong> October to May (Monsoon for dramatic mist & waterfalls)</li>
+                    <li><strong>Entry Timings:</strong> 6:00 AM to 6:00 PM</li>
+                </ul>
+                <div class="interactive-card">
+                    <h3>Plan Your Visit & Ascent</h3>
+                    <p>Choose your preferred mode of reaching Pratapgad Fort:</p>
+                    <div class="mode-buttons">
+
+                        <button class="mode-btn active" data-mode="route1" data-desc="Difficulty: Easy (Road Trip) | Approx. Time: 45 minutes drive from Mahabaleshwar town (22 km) via scenic mountain highway winding through Poladpur pass.">Mahabaleshwar Road</button>
+                        <button class="mode-btn" data-mode="route2" data-desc="Difficulty: Moderate | Approx. Time: 1 hour climb up 450 well-paved stone stairs leading from the vehicle parking lot to the upper citadel.">Main Stone Steps</button>
+                        <button class="mode-btn" data-mode="route3" data-desc="Difficulty: Moderate to Strenuous | Approx. Time: 3-4 hours wilderness trek ascending from Kumbhroshi village through dense Jawali forests.">Jawali Forest Trail</button>
+                    </div>
+                    <p id="mode-description" class="mode-desc">Difficulty: Easy (Road Trip) | Approx. Time: 45 minutes drive from Mahabaleshwar town (22 km) via scenic mountain highway winding through Poladpur pass.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="section container">
+            <h2>Location & Route Map</h2>
+            <div class="streetview">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Pratapgad+Fort+Satara+Maharashtra&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Pratapgad Fort Heritage Project • Maharashtra Tourism Portal. Preserving history for generations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

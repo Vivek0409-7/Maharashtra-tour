@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajgad Fort | King of Forts & First Capital of Swarajya</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Rajgad Fort</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
+                        <span class="arrow">&larr;</span> Back to All Forts & Hills
+                    </a>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Full-Width Hero Carousel Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273390_rajgad_fort_1.jpg');">
+            <div class="slide-content">
+                <h2>Rajgad Fort</h2>
+                <p>Heritage & Cultural Wonders of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Rajgad_Fort_%28Machi%29.jpg/1280px-Rajgad_Fort_%28Machi%29.jpg');">
+            <div class="slide-content">
+                <h2>Rajgad Fort</h2>
+                <p>Timeless Splendor of the Western Ghats</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/08/9b/10/rajgad-buruj.jpg?w=1200&h=-1&s=1');">
+            <div class="slide-content">
+                <h2>Rajgad Fort</h2>
+                <p>Majestic Destinations of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section container">
+            <h2>Overview</h2>
+            <p><strong>Rajgad Fort</strong> (the 'King of Forts') was the beloved and primary capital of the Maratha Empire for over 26 years during the glorious reign of <strong>Chhatrapati Shivaji Maharaj</strong>, before the capital was shifted to Raigad. Located approximately 54 kilometres southwest of Pune in the Western Ghats at an elevation of 1,376 metres, Rajgad witnessed landmark moments of Maratha history, including the birth of Rajaram Maharaj and key strategic councils.<br><br>The fort's monumental layout is an engineering marvel. It features three immense fortified plateau wings called <strong>Machis</strong> (Padmavati Machi, Suvela Machi, and Sanjeevani Machi) that radiate from a central towering citadel called the <strong>Balekilla</strong>. With its double-layered ramparts and secret escape tunnels, Rajgad is considered one of India's finest hill forts.</p>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section container">
+            <h2>Historical Highlights</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273390_rajgad_fort_1.jpg" alt="Rajgad Capital Citadel" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Capital of Swarajya for 26 Years</h3>
+                        <p>Shivaji Maharaj spent the highest number of his living days on Rajgad. The fort served as the nerve center for administrative governance, military campaigns, and royal family life from 1648 to 1674.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Rajgad_Fort_%28Machi%29.jpg/1280px-Rajgad_Fort_%28Machi%29.jpg" alt="Suvela Machi & Nedhe" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Suvela Machi & Natural Rock Eyelet</h3>
+                        <p>Suvela Machi extends like a mighty spearhead towards the east, featuring a gigantic triangular bastion and the famed 'Nedhe', a natural circular hole carved through solid mountain rock by millennia of wind.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/08/9b/10/rajgad-buruj.jpg?w=1200&h=-1&s=1" alt="Sanjeevani Machi ramparts" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Sanjeevani Machi Defenses</h3>
+                        <p>Constructed with fortified double stone curtains, secret posterns (Chor Darwaja), and stepped bastions, Sanjeevani Machi protected the southern flank against surprise artillery bombardments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section container">
+            <h2>Major Attractions</h2>
+            <div class="table-responsive">
+                <table class="attractions-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Balekilla (Highest Citadel)</strong></td>
+                            <td>The uppermost citadel accessible through a steep rock staircase, housing the ruins of Shivaji's royal chambers.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Padmavati Machi & Temple</strong></td>
+                            <td>The central plateau holding the restored Padmavati temple, ancient residential quarters, and Padmavati Lake.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Suvela Machi & 'Nedhe' Rock Needle</strong></td>
+                            <td>A breathtaking narrow mountain ridge terminating in a giant bastion with a natural rock window.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sanjeevani Machi Fortifications</strong></td>
+                            <td>A 2.5-kilometer fortified spur with double-walled stone ramparts overlooking deep Sahyadri gorges.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pali Darwaza & Gunjavane Darwaza</strong></td>
+                            <td>Massive, beautifully preserved Maratha entry gates designed with hidden turns against cavalry.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alu Darwaza & Chor Darwaja</strong></td>
+                            <td>Secret tactical egress gates used by Maratha commandos to launch flanking counter-attacks.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visitor Info & Interactive Route Selector -->
+        <section id="visitor-info" class="section container">
+            <h2>Essential Visitor Information</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Category:</strong> Fort</li>
+                    <li><strong>Location:</strong> Pune District, Sahyadri Mountains, Maharashtra</li>
+                    <li><strong>Elevation:</strong> 1,376 metres (4,514 ft) above sea level</li>
+                    <li><strong>Best Time to Visit:</strong> July to February (Monsoon cloud carpets & pleasant winters)</li>
+                    <li><strong>Entry Timings:</strong> 6:00 AM to 6:00 PM</li>
+                </ul>
+                <div class="interactive-card">
+                    <h3>Plan Your Visit & Ascent</h3>
+                    <p>Choose your preferred mode of reaching Rajgad Fort:</p>
+                    <div class="mode-buttons">
+
+                        <button class="mode-btn active" data-mode="route1" data-desc="Difficulty: Moderate | Approx. Time: 2.5 - 3 hours. The Pali route is the classic royal path with broad stone steps, ideal for beginners and families.">Pali Royal Trail</button>
+                        <button class="mode-btn" data-mode="route2" data-desc="Difficulty: Thrilling / Steep | Approx. Time: 2.5 hours. Trek starting from Gunjavane village ascending rocky ridges equipped with steel safety railings.">Gunjavane Ridge Trek</button>
+                        <button class="mode-btn" data-mode="route3" data-desc="Difficulty: Strenuous Range Trek | Approx. Time: 6 - 8 hours. Legendary Sahyadri ridge traverse connecting Torna Fort to Rajgad along high mountain saddles.">Torna-Rajgad Traverse</button>
+                    </div>
+                    <p id="mode-description" class="mode-desc">Difficulty: Moderate | Approx. Time: 2.5 - 3 hours. The Pali route is the classic royal path with broad stone steps, ideal for beginners and families.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="section container">
+            <h2>Location & Route Map</h2>
+            <div class="streetview">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Rajgad+Fort+Pune+Maharashtra&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Rajgad Fort Heritage Project • Maharashtra Tourism Portal. Preserving history for generations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

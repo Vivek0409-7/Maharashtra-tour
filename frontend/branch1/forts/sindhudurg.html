@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindhudurg Fort | Chhatrapati Shivaji's Oceanic Bastion</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Sindhudurg Fort</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
+                        <span class="arrow">&larr;</span> Back to All Forts & Hills
+                    </a>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Full-Width Hero Carousel Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273420_sindhudurg_fort_1.jpg');">
+            <div class="slide-content">
+                <h2>Sindhudurg Fort</h2>
+                <p>Heritage & Cultural Wonders of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://media.licdn.com/dms/image/v2/D4D22AQEfR92UkToBKw/feedshare-shrink_800/feedshare-shrink_800/0/1697804771880?e=2147483647&v=beta&t=5U3zuUussQMsrF5SEj5775yl-2Bk8ALgB-_7mimb3RE');">
+            <div class="slide-content">
+                <h2>Sindhudurg Fort</h2>
+                <p>Timeless Splendor of the Western Ghats</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Sindhudurg_Fort.jpg/1280px-Sindhudurg_Fort.jpg');">
+            <div class="slide-content">
+                <h2>Sindhudurg Fort</h2>
+                <p>Majestic Destinations of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section container">
+            <h2>Overview</h2>
+            <p><strong>Sindhudurg Fort</strong> (meaning 'Ocean Fort') is the magnum opus of Maratha naval engineering, constructed between 1664 and 1667 on the Kurte island rock off the Malvan shoreline in southern Konkan. Built under the direct visionary guidance of <strong>Chhatrapati Shivaji Maharaj</strong>, this 48-acre island stronghold served as the premier headquarters of the Maratha Navy, countering Portuguese, British, and Siddi maritime supremacy.<br><br>The fortress is enclosed by a massive 3-kilometre perimeter wall reinforced with <strong>42 grand bastions</strong>. Over 4,000 mounds of iron were used for casting, and foundation stones were laid in molten lead to withstand pounding Arabian Sea breakers. Sindhudurg is also uniquely revered for housing the only temple where Chhatrapati Shivaji Maharaj is worshipped as a deity, complete with his authenticated footprint and handprint impressions.</p>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section container">
+            <h2>Historical Highlights</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273420_sindhudurg_fort_1.jpg" alt="Sindhudurg Sea Walls" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Birth of Maratha Sea Power (1664)</h3>
+                        <p>Recognizing that 'He who rules the sea rules the land', Shivaji Maharaj personally chose Kurte Island and engaged master architects Hiroji Indulkar to construct an invincible naval garrison.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Sindhudurg_Fort.jpg/1280px-Sindhudurg_Fort.jpg" alt="Shivaji Maharaj Temple" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Shri Shivchhatrapati Temple</h3>
+                        <p>Constructed by Rajaram Maharaj in 1695, this sacred sanctum features a black stone idol of Shivaji Maharaj portrayed in a seated boat-rowing posture without a beard, honoring his maritime identity.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQEfR92UkToBKw/feedshare-shrink_800/feedshare-shrink_800/0/1697804771880?e=2147483647&v=beta&t=5U3zuUussQMsrF5SEj5775yl-2Bk8ALgB-_7mimb3RE" alt="Royal Footprints" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Royal Footprint & Handprint Impressions</h3>
+                        <p>Protected under glass domes on the ramparts are the authentic stone impressions of Chhatrapati Shivaji Maharaj's left hand and footprint left in wet lime mortar during construction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section container">
+            <h2>Major Attractions</h2>
+            <div class="table-responsive">
+                <table class="attractions-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Shri Shivchhatrapati Temple</strong></td>
+                            <td>The world's only historical temple dedicated to Shivaji Maharaj as the presiding deity.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Handprint and Footprint Impressions</strong></td>
+                            <td>Sacred rock impressions left by Shivaji Maharaj preserved on the fortress parapet.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Doodh Bav, Sakhar Bav & Dahi Bav</strong></td>
+                            <td>Three miraculously fresh, sweet drinking water wells amidst the salty ocean.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>42 Ocean Bastions & 3 km Rampart Walk</strong></td>
+                            <td>Elevated stone walkway offering breathtaking views of crashing ocean waves.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Concealed Sea Main Entrance (Dilli Darwaza)</strong></td>
+                            <td>A masterfully hidden gateway invisible from approaching enemy vessels.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Malvan Coral Reefs & Scuba Zone</strong></td>
+                            <td>Vibrant underwater marine life and diving centers located directly around the fort.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visitor Info & Interactive Route Selector -->
+        <section id="visitor-info" class="section container">
+            <h2>Essential Visitor Information</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Category:</strong> Fort</li>
+                    <li><strong>Location:</strong> Malvan, Sindhudurg District, Konkan Coast, Maharashtra</li>
+                    <li><strong>Elevation:</strong> Sea Level (Island Fortress surrounded by the Arabian Sea)</li>
+                    <li><strong>Best Time to Visit:</strong> October to March (Gentle sea breeze & optimal water clarity)</li>
+                    <li><strong>Entry Timings:</strong> 8:00 AM to 5:30 PM (Ferry operates subject to weather)</li>
+                </ul>
+                <div class="interactive-card">
+                    <h3>Plan Your Visit & Ascent</h3>
+                    <p>Choose your preferred mode of reaching Sindhudurg Fort:</p>
+                    <div class="mode-buttons">
+
+                        <button class="mode-btn active" data-mode="route1" data-desc="Difficulty: Easy (Passenger Ferry) | Approx. Time: 10-15 minute ride on government-regulated passenger boats from Malvan Dandi Jetty directly to the fort gate.">Malvan Ferry Boat</button>
+                        <button class="mode-btn" data-mode="route2" data-desc="Difficulty: Road Drive | Approx. Time: 45 minutes drive from Kudal or Kankavli railway station on Konkan Railway route to Malvan beach town.">Drive from Kudal/Kankavli</button>
+                        <button class="mode-btn" data-mode="route3" data-desc="Difficulty: Air &amp; Coastal Highway | Approx. Time: 35 minutes scenic drive from Chipi Airport (Sindhudurg) or 2.5 hours drive from North Goa (Mopa Airport).">Chipi / Goa Airport Route</button>
+                    </div>
+                    <p id="mode-description" class="mode-desc">Difficulty: Easy (Passenger Ferry) | Approx. Time: 10-15 minute ride on government-regulated passenger boats from Malvan Dandi Jetty directly to the fort gate.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="section container">
+            <h2>Location & Route Map</h2>
+            <div class="streetview">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Sindhudurg+Fort+Malvan+Maharashtra&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sindhudurg Fort Heritage Project • Maharashtra Tourism Portal. Preserving history for generations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

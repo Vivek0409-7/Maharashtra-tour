@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalsubai Peak | The Everest of Maharashtra</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Kalsubai Peak</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
+                        <span class="arrow">&larr;</span> Back to All Forts & Hills
+                    </a>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Full-Width Hero Carousel Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273425_kalsubai_peak_1.jpg');">
+            <div class="slide-content">
+                <h2>Kalsubai Peak</h2>
+                <p>Heritage & Cultural Wonders of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Kalsubai_Peak_Maharashtra.jpg/1280px-Kalsubai_Peak_Maharashtra.jpg');">
+            <div class="slide-content">
+                <h2>Kalsubai Peak</h2>
+                <p>Timeless Splendor of the Western Ghats</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Kalsubai_trek.jpg/1280px-Kalsubai_trek.jpg');">
+            <div class="slide-content">
+                <h2>Kalsubai Peak</h2>
+                <p>Majestic Destinations of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section container">
+            <h2>Overview</h2>
+            <p><strong>Kalsubai Peak</strong> is the highest point in Maharashtra, soaring to a majestic altitude of <strong>1,646 metres (5,400 feet)</strong> in the Sahyadri range of Western Ghats. Situated within the Kalsubai Harishchandragad Wildlife Sanctuary in the Ahilyanagar district, it is affectionately celebrated as the <em>'Everest of Maharashtra'</em>.<br><br>The peak provides an awe-inspiring 360-degree panoramic vantage point, with sightlines extending to historic fortresses such as <strong>Alang, Madan, Kulang (AMK)</strong>, Ratangad, Harishchandragad, and the sparkling emerald waters of Arthur Lake in Bhandardara. At the very summit rests the sacred shrine of <strong>Kalsubai Devi</strong>, drawing pilgrims and thousands of adventure enthusiasts every weekend.</p>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section container">
+            <h2>Historical Highlights</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273425_kalsubai_peak_1.jpg" alt="Kalsubai Summit" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Highest Summit of Maharashtra</h3>
+                        <p>Kalsubai marks the highest geographic altitude in the entire Western Ghats of Maharashtra, acting as a natural weather divide between the Deccan Plateau and Konkan.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Kalsubai_Peak_Maharashtra.jpg/1280px-Kalsubai_Peak_Maharashtra.jpg" alt="Kalsubai Temple" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Legend of Kalsubai Devi</h3>
+                        <p>Local folklore tells of a tribal housemaid named Kalsubai who sought refuge from unjust masters in the high mountain meadows and disappeared into the summit rock, blessing the valley.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Kalsubai_trek.jpg/1280px-Kalsubai_trek.jpg" alt="Steel Ladder Climb" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Famous Steel Ladders of Kalsubai</h3>
+                        <p>To make the sheer vertical rock bands accessible, the Forest Department and local villagers installed 4 sturdy steel ladders, creating a thrilling and safe climbing experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section container">
+            <h2>Major Attractions</h2>
+            <div class="table-responsive">
+                <table class="attractions-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Kalsubai Devi Temple at Summit</strong></td>
+                            <td>Small traditional red shrine honoring the goddess, surrounded by prayer bells and colorful flags.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Thrilling Steel Ladder Sections</strong></td>
+                            <td>Four vertical iron ladder climbs fixed securely to rocky cliff faces along the ridge.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AMK (Alang, Madan, Kulang) Vistas</strong></td>
+                            <td>Direct sightline to the legendary trio of impregnable rock-tower fortresses.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wilson Dam & Arthur Lake Views</strong></td>
+                            <td>Gleaming turquoise water bodies visible in the Bhandardara valley below.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ocean of Clouds (Sunrise Phenomenon)</strong></td>
+                            <td>Witness the sun rise over dense white cloud inversions blanketed below the summit.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kalsubai Wildlife Sanctuary</strong></td>
+                            <td>Lush mountain flora, medicinal plants, butterfly swarms, and endangered Sahyadri bird species.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visitor Info & Interactive Route Selector -->
+        <section id="visitor-info" class="section container">
+            <h2>Essential Visitor Information</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Category:</strong> Hill</li>
+                    <li><strong>Location:</strong> Ahilyanagar District, Western Ghats, Maharashtra</li>
+                    <li><strong>Elevation:</strong> 1,646 metres (5,400 ft) - The Highest Summit in Maharashtra</li>
+                    <li><strong>Best Time to Visit:</strong> July to February (Monsoon cloud carpets & winter sunrises)</li>
+                    <li><strong>Entry Timings:</strong> Open 24 Hours (Popular for Night Treks & Sunrise)</li>
+                </ul>
+                <div class="interactive-card">
+                    <h3>Plan Your Visit & Ascent</h3>
+                    <p>Choose your preferred mode of reaching Kalsubai Peak:</p>
+                    <div class="mode-buttons">
+
+                        <button class="mode-btn active" data-mode="route1" data-desc="Difficulty: Moderate | Approx. Time: 3 to 4 hours. The popular Bari village route equipped with well-marked trails, refreshment tea stalls, and steel ladders.">Bari Village Day Trek</button>
+                        <button class="mode-btn" data-mode="route2" data-desc="Difficulty: Moderate (Night Ascent) | Approx. Time: Start trek at 1:00 AM from Bari to reach the summit by 5:30 AM for a world-class Sahyadri sunrise.">Midnight Sunrise Trek</button>
+                        <button class="mode-btn" data-mode="route3" data-desc="Difficulty: Strenuous | Approx. Time: 4.5 hours. Alternate wilderness trail starting from Indore village via steep mountain shoulders for offbeat adventurers.">Indore Village Trail</button>
+                    </div>
+                    <p id="mode-description" class="mode-desc">Difficulty: Moderate | Approx. Time: 3 to 4 hours. The popular Bari village route equipped with well-marked trails, refreshment tea stalls, and steel ladders.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="section container">
+            <h2>Location & Route Map</h2>
+            <div class="streetview">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Kalsubai+Peak+Maharashtra&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Kalsubai Peak Heritage Project • Maharashtra Tourism Portal. Preserving history for generations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

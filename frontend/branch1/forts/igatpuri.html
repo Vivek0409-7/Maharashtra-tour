@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igatpuri | Gateway to the Sahyadris & Vipassana Sanctuary</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Igatpuri</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
+                        <span class="arrow">&larr;</span> Back to All Forts & Hills
+                    </a>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Full-Width Hero Carousel Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273469_igatpuri_1.jpg');">
+            <div class="slide-content">
+                <h2>Igatpuri</h2>
+                <p>Heritage & Cultural Wonders of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');">
+            <div class="slide-content">
+                <h2>Igatpuri</h2>
+                <p>Timeless Splendor of the Western Ghats</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Dhamma_Giri_Pagoda_Igatpuri.jpg/1280px-Dhamma_Giri_Pagoda_Igatpuri.jpg');">
+            <div class="slide-content">
+                <h2>Igatpuri</h2>
+                <p>Majestic Destinations of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section container">
+            <h2>Overview</h2>
+            <p><strong>Igatpuri</strong> is a tranquil hill station nestled in the Nashik district, perched at an altitude of 585 metres in the highest mountain precinct of the Western Ghats. Universally acknowledged as the <em>'Gateway to the Sahyadris'</em>, Igatpuri is surrounded by towering peaks, the dramatic gorge of Kasara Ghat (Thal Ghat), and sparkling reservoirs like Bhavali Dam and Upper Vaitarna Lake.<br><br>Igatpuri is internationally famous as the world headquarters of the <strong>Vipassana International Academy at Dhamma Giri</strong>, established by S. N. Goenka in 1976. The complex features a dazzling Burmese-style golden pagoda that draws spiritual seekers from around the world. It also serves as the prime base camp for major Sahyadri treks including Kalsubai, Ratangad, and Tringalwadi.</p>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section container">
+            <h2>Historical Highlights</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Dhamma_Giri_Pagoda_Igatpuri.jpg/1280px-Dhamma_Giri_Pagoda_Igatpuri.jpg" alt="Dhamma Giri Golden Pagoda" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Global Vipassana Academy (Dhamma Giri)</h3>
+                        <p>Dhamma Giri is one of the world's largest meditation centers, dedicated to the ancient Buddhist technique of Vipassana. Its soaring Golden Pagoda houses individual meditation cells.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273469_igatpuri_1.jpg" alt="Kasara Ghat & Railway Incline" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Historic Kasara Ghat Railway</h3>
+                        <p>The Thal Ghat railway descent from Igatpuri to Kasara was inaugurated in 1865, conquering precipitous drops using banking locomotives and tunnels that opened the Deccan to the port of Bombay.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Tringalwadi Fort & Caves" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Ancient Forts & 10th-Century Caves</h3>
+                        <p>Surrounding Igatpuri are the 10th-century Tringalwadi Fort and ancient Jain rock-cut temples, serving as strategic watches along the historic trade route linking Konkan to Nashik.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section container">
+            <h2>Major Attractions</h2>
+            <div class="table-responsive">
+                <table class="attractions-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Dhamma Giri Vipassana Center</strong></td>
+                            <td>World-renowned meditation academy featuring a golden Myanmar-style pagoda and lush gardens.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bhavali Dam & Waterfalls</strong></td>
+                            <td>Scenic earthfill reservoir and picnic paradise where cascading streams flow during the monsoon.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tringalwadi Fort & Jain Caves</strong></td>
+                            <td>Historic hill fort perched at 3,238 ft with 10th-century Jain rock-cut carvings.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Camel Valley & Bhatsa River Valley</strong></td>
+                            <td>Deep valley gorge with roaring waterfalls and viewpoints framing morning mountain mist.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Upper Vaitarna Lake & Dam</strong></td>
+                            <td>Vast emerald reservoir with peaceful shores and campsites beneath starry night skies.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ghatandevi Temple</strong></td>
+                            <td>Revered shrine dedicated to the goddess protecting travelers crossing the treacherous ghats.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visitor Info & Interactive Route Selector -->
+        <section id="visitor-info" class="section container">
+            <h2>Essential Visitor Information</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Category:</strong> Hill</li>
+                    <li><strong>Location:</strong> Nashik District, Western Ghats, Maharashtra</li>
+                    <li><strong>Elevation:</strong> 585 metres (1,919 ft) above sea level</li>
+                    <li><strong>Best Time to Visit:</strong> June to March (Lush monsoon cascades & cool winter climate)</li>
+                    <li><strong>Entry Timings:</strong> Open 24 Hours</li>
+                </ul>
+                <div class="interactive-card">
+                    <h3>Plan Your Visit & Ascent</h3>
+                    <p>Choose your preferred mode of reaching Igatpuri:</p>
+                    <div class="mode-buttons">
+
+                        <button class="mode-btn active" data-mode="route1" data-desc="Difficulty: Express Highway | Approx. Time: 2.5 hours (120 km) from Mumbai via Mumbai-Nashik Expressway (NH 160) ascending Kasara Ghat.">Mumbai-Nashik Expressway</button>
+                        <button class="mode-btn" data-mode="route2" data-desc="Difficulty: Direct Train Network | Approx. Time: 2 hours by central railway express train stopping directly at Igatpuri Junction station.">Central Railway Train</button>
+                        <button class="mode-btn" data-mode="route3" data-desc="Difficulty: Short Drive | Approx. Time: 45 minutes (45 km) smooth four-lane highway drive heading south-west from Nashik city.">Drive from Nashik City</button>
+                    </div>
+                    <p id="mode-description" class="mode-desc">Difficulty: Express Highway | Approx. Time: 2.5 hours (120 km) from Mumbai via Mumbai-Nashik Expressway (NH 160) ascending Kasara Ghat.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="section container">
+            <h2>Location & Route Map</h2>
+            <div class="streetview">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Igatpuri+Nashik+Maharashtra&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Igatpuri Heritage Project • Maharashtra Tourism Portal. Preserving history for generations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

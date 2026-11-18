@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shivneri Fort | Birthplace of Chhatrapati Shivaji Maharaj</title>
-    <link rel="stylesheet" href="shivstyle.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -19,6 +19,7 @@
                 <li><a href="#history">History</a></li>
                 <li><a href="#attractions">Attractions</a></li>
                 <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts"><span class="arrow">&larr;</span> Back to All Forts & Hills</a></li>
             </ul>
             <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
         </nav>
@@ -131,8 +132,8 @@
                     <h3>Plan Your Visit</h3>
                     <p>Choose your preferred mode of exploring:</p>
                     <div class="mode-buttons">
-                        <button class="mode-btn" data-mode="trek">Trekking Path (1.5 - 2 hrs)</button>
-                        <button class="mode-btn" data-mode="history-tour">Guided Heritage Tour</button>
+                        <button class="mode-btn" data-mode="trek" data-desc="The trekking trail starts from the base village of Junnar. It takes roughly 1.5 to 2 hours to hike up through the ancient steps and massive fortification gates.">Trekking Path (1.5 - 2 hrs)</button>
+                        <button class="mode-btn" data-mode="history-tour" data-desc="Take a guided walking tour to deep-dive into the history of Shivaji Maharaj's birth chamber, the Shivai Devi temple, and the historic water cisterns.">Guided Heritage Tour</button>
                     </div>
                     <p id="mode-description" class="mode-desc">Click an option above to view details.</p>
                 </div>
@@ -148,6 +149,6 @@
         </div>
     </footer>
 
-    <script src="shivscript.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

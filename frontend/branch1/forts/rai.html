@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raigad Fort | Capital of the Maratha Empire</title>
-    <link rel="stylesheet" href="raistyle.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -19,7 +19,7 @@
                 <li><a href="#history">History</a></li>
                 <li><a href="#attractions">Attractions</a></li>
                 <li><a href="#visitor-info">Visitor Info</a></li>
-                <li><button onclick="window.history.back()" class="back-to-forts-btn">
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
                         <span class="arrow">&larr;</span> Back to All Forts
                     </button>
                 </li>
@@ -162,8 +162,8 @@ The renowned architect Hiroji Indulkar designed and reconstructed the fort with 
                     <h3>Plan Your Ascent</h3>
                     <p>Choose your preferred mode of reaching the top:</p>
                     <div class="mode-buttons">
-                        <button class="mode-btn" data-mode="ropeway">Ropeway (5-10 mins)</button>
-                        <button class="mode-btn" data-mode="trek">Trek (1,737 Steps / 2-3 hrs)</button>
+                        <button class="mode-btn" data-mode="ropeway" data-desc="The aerial ropeway takes you directly to the top in about 5 to 10 minutes. Ideal for families and those looking for a relaxed journey with scenic valley views.">Ropeway (5-10 mins)</button>
+                        <button class="mode-btn" data-mode="trek" data-desc="The classic trekking route from Pachad village features roughly 1,737 stone-cut steps. It takes about 2 to 3 hours to climb and offers an immersive historical trekking experience.">Trek (1,737 Steps / 2-3 hrs)</button>
                     </div>
                     <p id="mode-description" class="mode-desc">Click an option above to view details.</p>
                 </div>
@@ -201,6 +201,6 @@ The renowned architect Hiroji Indulkar designed and reconstructed the fort with 
         </div>
     </footer>
 
-    <script src="raiscript.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

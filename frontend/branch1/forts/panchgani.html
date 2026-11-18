@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchgani | The Land of Five Hills & Asian Tableland</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Panchgani</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
+                        <span class="arrow">&larr;</span> Back to All Forts & Hills
+                    </a>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Full-Width Hero Carousel Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273445_panchgani_1.jpg');">
+            <div class="slide-content">
+                <h2>Panchgani</h2>
+                <p>Heritage & Cultural Wonders of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Panchgani_tableland.jpg/1280px-Panchgani_tableland.jpg');">
+            <div class="slide-content">
+                <h2>Panchgani</h2>
+                <p>Timeless Splendor of the Western Ghats</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Panchgani_valley.jpg/1280px-Panchgani_valley.jpg');">
+            <div class="slide-content">
+                <h2>Panchgani</h2>
+                <p>Majestic Destinations of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section container">
+            <h2>Overview</h2>
+            <p><strong>Panchgani</strong> is a picturesque hill retreat nestled amidst five towering hills of the Sahyadris at an altitude of 1,293 metres in Satara district, located just 18 km before Mahabaleshwar. Renowned for its salubrious year-round climate and pristine oxygen-rich air, Panchgani was developed in the 1860s by British officer John Chesson as a sanatorium and boarding school haven.<br><br>Panchgani is universally famous for <strong>Table Land</strong>, a sprawling 95-acre laterite rock volcanic plateau that is the second longest mountain plateau in Asia. Offering horse rides, paragliding launches, organic strawberry orchards, and sweeping views of the Krishna River valley, Panchgani is one of Western India's most charming destinations.</p>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section container">
+            <h2>Historical Highlights</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Panchgani_tableland.jpg/1280px-Panchgani_tableland.jpg" alt="Table Land Plateau" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Asia's 2nd Longest Plateau</h3>
+                        <p>Table Land is an expansive flat laterite mountain top extending over 95 acres. Created by ancient volcanic lava outflows, it offers wide horizon views and has featured in dozens of iconic Bollywood movies.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273445_panchgani_1.jpg" alt="Krishna Valley Panorama" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Sydney Point & Dhom Dam</h3>
+                        <p>Named after Sir Sidney Beckwarth, this elevated promontory delivers sweeping vistas overlooking the vast turquoise reservoir waters of Dhom Dam and the ancient hill fortress of Pandavgad.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Panchgani_valley.jpg/1280px-Panchgani_valley.jpg" alt="Parsi Heritage" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Heritage Sanatorium & Schools</h3>
+                        <p>Panchgani's pure air attracted Parsi settlers and educators, leading to prestigious residential institutions like St. Peter's and Sanjeewan Vidyalaya that have nurtured leaders for a century.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section container">
+            <h2>Major Attractions</h2>
+            <div class="table-responsive">
+                <table class="attractions-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Table Land Plateau</strong></td>
+                            <td>Sprawling 95-acre volcanic plateau offering horseback riding, caves, and sweeping sunsets.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sydney Point</strong></td>
+                            <td>Spectacular cliff viewpoint looking down upon Dhom Dam and lush Kamalgad valley.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Parsi Point</strong></td>
+                            <td>Scenic overlook perched above the Krishna River valley with lush picnic spots and gardens.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Devil's Kitchen</strong></td>
+                            <td>Mythological laterite cave complex believed to have housed the Pandavas during their exile.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Devrai Art Village</strong></td>
+                            <td>Non-profit arts commune where tribal craftsmen produce exquisite Dokra brass and iron artwork.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Strawberry & Mulberry Orchards</strong></td>
+                            <td>Interactive farm visits offering fresh berry picking and organic fruit jams.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visitor Info & Interactive Route Selector -->
+        <section id="visitor-info" class="section container">
+            <h2>Essential Visitor Information</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Category:</strong> Hill</li>
+                    <li><strong>Location:</strong> Satara District, Western Ghats, Maharashtra</li>
+                    <li><strong>Elevation:</strong> 1,293 metres (4,242 ft) above sea level</li>
+                    <li><strong>Best Time to Visit:</strong> September to May (Crisp mountain air & berry blossoms)</li>
+                    <li><strong>Entry Timings:</strong> Open 24 Hours (Points open 6:00 AM to 6:30 PM)</li>
+                </ul>
+                <div class="interactive-card">
+                    <h3>Plan Your Visit & Ascent</h3>
+                    <p>Choose your preferred mode of reaching Panchgani:</p>
+                    <div class="mode-buttons">
+
+                        <button class="mode-btn active" data-mode="route1" data-desc="Difficulty: Easy (Scenic Drive) | Approx. Time: 2 hours (100 km) from Pune via NH 48, ascending through Pasarni Ghat.">Drive from Pune (100 km)</button>
+                        <button class="mode-btn" data-mode="route2" data-desc="Difficulty: Short Drive | Approx. Time: 25 minutes (18 km) on the ridge road from sister hill station Mahabaleshwar.">Drive from Mahabaleshwar</button>
+                        <button class="mode-btn" data-mode="route3" data-desc="Difficulty: Train &amp; Taxi | Approx. Time: Train to Wathar or Satara railway station, followed by an hour's taxi ascent up the ghats.">Satara / Wathar Rail Route</button>
+                    </div>
+                    <p id="mode-description" class="mode-desc">Difficulty: Easy (Scenic Drive) | Approx. Time: 2 hours (100 km) from Pune via NH 48, ascending through Pasarni Ghat.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="section container">
+            <h2>Location & Route Map</h2>
+            <div class="streetview">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Panchgani+Satara+Maharashtra&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Panchgani Heritage Project • Maharashtra Tourism Portal. Preserving history for generations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murud-Janjira Fort | The Unconquered Island Citadel</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Murud-Janjira Fort</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
+                        <span class="arrow">&larr;</span> Back to All Forts & Hills
+                    </a>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Full-Width Hero Carousel Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273418_murud_janjira_fort_1.jpg');">
+            <div class="slide-content">
+                <h2>Murud-Janjira Fort</h2>
+                <p>Heritage & Cultural Wonders of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Murud_Janjira_Fort.jpg/1280px-Murud_Janjira_Fort.jpg');">
+            <div class="slide-content">
+                <h2>Murud-Janjira Fort</h2>
+                <p>Timeless Splendor of the Western Ghats</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Murud_Janjira_aerial.jpg/1280px-Murud_Janjira_aerial.jpg');">
+            <div class="slide-content">
+                <h2>Murud-Janjira Fort</h2>
+                <p>Majestic Destinations of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section container">
+            <h2>Overview</h2>
+            <p><strong>Murud-Janjira Fort</strong> is a legendary marine stronghold standing proudly on an oval-shaped island rock in the Arabian Sea, right off the coastal village of Murud in Raigad district. Recognized globally as one of the most impregnable sea fortifications in human history, Janjira remained <strong>completely undefeated</strong> throughout centuries of naval warfare against the Marathas, Portuguese, and British Empire.<br><br>Originally erected in the 15th century by Koli fishermen as a wooden fortress, it was substantially fortified by the <strong>Siddi dynasty</strong> with 19 rounded bastions and towering 40-foot granite walls that rise directly out of the ocean surf. Remarkably, despite being completely enveloped by saltwater, the fortress contains large freshwater lakes that supplied fresh drinking water to its garrison.</p>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section container">
+            <h2>Historical Highlights</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273418_murud_janjira_fort_1.jpg" alt="Murud-Janjira Sea Walls" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Undefeated Sea Citadel</h3>
+                        <p>Neither Chhatrapati Shivaji Maharaj nor Sambhaji Maharaj or the Portuguese could break through Janjira's defenses. Sambhaji Maharaj even attempted to build a stone causeway across the sea from nearby Padmadurg.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Murud_Janjira_Fort.jpg/1280px-Murud_Janjira_Fort.jpg" alt="Janjira Cannons" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Great Kalal Bangadi Cannons</h3>
+                        <p>Janjira boasted heavy artillery including the legendary Kalal Bangadi, Landakasam, and Chavri bronze cannons—renowned for their immense range, heat resistance, and sheer destructive maritime power.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Murud_Janjira_aerial.jpg/1280px-Murud_Janjira_aerial.jpg" alt="Janjira Aerial View" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Freshwater Miracles at Sea</h3>
+                        <p>Inside the fort complex lie two large freshwater lakes (Sheshai Talav), deep natural sweet water cisterns that sustained hundreds of inhabitants during extended months of maritime blockade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section container">
+            <h2>Major Attractions</h2>
+            <div class="table-responsive">
+                <table class="attractions-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Daryi Darwaza (Hidden Sea Entrance)</strong></td>
+                            <td>Concealed sea-level entrance designed so it remains invisible until boats are within yards.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>19 Mighty Rounded Bastions</strong></td>
+                            <td>Imposing monolithic stone bastions surviving centuries of pounding ocean waves.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kalal Bangadi & Historic Cannons</strong></td>
+                            <td>Third largest cannon in India, forged from a rare alloy of five metals.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Surul Khan's Palace Ruins</strong></td>
+                            <td>Atmospheric multi-storey ruins of the royal Siddi residence and administrative court.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sweet Water Reservoirs (Sheshai Talav)</strong></td>
+                            <td>Two large freshwater lakes flourishing in the midst of the Arabian Sea.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ancient Mosque & Royal Bathhouses</strong></td>
+                            <td>Architectural remains reflecting Persian, Islamic, and Konkani design influences.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visitor Info & Interactive Route Selector -->
+        <section id="visitor-info" class="section container">
+            <h2>Essential Visitor Information</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Category:</strong> Fort</li>
+                    <li><strong>Location:</strong> Raigad District, Arabian Sea Coast, Maharashtra</li>
+                    <li><strong>Elevation:</strong> Sea Level (Island Fortress surrounded by Arabian Sea)</li>
+                    <li><strong>Best Time to Visit:</strong> October to March (Calm seas & pleasant breezes)</li>
+                    <li><strong>Entry Timings:</strong> 7:00 AM to 6:00 PM (Subject to ocean tides)</li>
+                </ul>
+                <div class="interactive-card">
+                    <h3>Plan Your Visit & Ascent</h3>
+                    <p>Choose your preferred mode of reaching Murud-Janjira Fort:</p>
+                    <div class="mode-buttons">
+
+                        <button class="mode-btn active" data-mode="route1" data-desc="Difficulty: Easy (Sailboat Journey) | Approx. Time: 15-20 minutes sailing on traditional wind-powered sailboats from Rajpuri Jetty directly to the fort gate.">Sailboat from Rajpuri</button>
+                        <button class="mode-btn" data-mode="route2" data-desc="Difficulty: Moderate | Approx. Time: 3.5 hours drive from Mumbai via Alibaug and Roha highway to Murud town, then taxi 5 km to Rajpuri dock.">Road via Alibaug</button>
+                        <button class="mode-btn" data-mode="route3" data-desc="Difficulty: Easy (Waterway &amp; Road) | Approx. Time: 2 hours by taking Mandwa Ro-Ro ferry from Mumbai (Bhaucha Dhakka), followed by scenic coastal drive to Murud.">Ro-Ro Ferry & Coastal Drive</button>
+                    </div>
+                    <p id="mode-description" class="mode-desc">Difficulty: Easy (Sailboat Journey) | Approx. Time: 15-20 minutes sailing on traditional wind-powered sailboats from Rajpuri Jetty directly to the fort gate.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="section container">
+            <h2>Location & Route Map</h2>
+            <div class="streetview">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Murud+Janjira+Fort+Raigad+Maharashtra&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Murud-Janjira Fort Heritage Project • Maharashtra Tourism Portal. Preserving history for generations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

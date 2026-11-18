@@ -1474,3 +1474,49 @@ footer {
     .footer-grid { grid-template-columns: 1fr; }
     .ls3d-item { width: 230px; height: 360px; }
 }
+/* Font families and weights */
+
+/* Headings and brand logo */
+.brand-title, .hero h1, .section-title, .section-title.light, .showcase-text-overlay h3 {
+    font-family: 'Rozha One', serif;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+}
+
+/* Body text */
+body {
+    font-family: 'Hind', sans-serif;
+    line-height: 1.6;
+}
+
+/* UI elements */
+.nav-links a,
+.section-tag,
+.btn-primary,
+.btn-outline,
+.form-group label,
+.form-control,
+.stats-banner .stat-number,
+.stats-banner .stat-label {
+    font-family: 'Hind', sans-serif;
+}
+
+/* Specific UI weights */
+.nav-links a,
+.btn-primary,
+.btn-outline,
+.form-group label,
+.form-control {
+    font-weight: 600; /* SemiBold */
+}
+
+/* Uppercase eyebrow labels */
+.section-tag {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+/* JetBrains Mono for JSON inspector */
+.dev-json-viewer {
+    font-family: 'JetBrains Mono', monospace;
+}

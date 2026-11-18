@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;500;600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
@@ -92,15 +92,40 @@ nav a:hover {
 .theme-btn {
     margin-left: 25px;
     border: none;
-    width: 42px;
-    height: 42px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     cursor: pointer;
-    background: var(--card);
-    color: var(--text);
+    background: #f5efe6;
+    color: #f58213;
     font-size: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 2px solid rgba(245, 130, 19, 0.15);
 }
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(245, 130, 19, 0.3);
+}
+
+/* Light mode: show moon, hide sun */
+.theme-btn .icon-moon { display: block; }
+.theme-btn .icon-sun  { display: none;  }
+
+/* Dark mode: show sun, hide moon */
+body.dark .theme-btn {
+    background: #0F172A;
+    color: #f58213;
+    border-color: rgba(245, 130, 19, 0.3);
+    box-shadow: 0 4px 14px rgba(0,0,0,.35);
+}
+
+body.dark .theme-btn .icon-moon { display: none;  }
+body.dark .theme-btn .icon-sun  { display: block; }
 
 .menu-btn {
     display: none;
@@ -455,7 +480,43 @@ footer p {
         color: var(--text);
         font-size: 25px;
     }
-    .theme-btn { margin-left: 10px; }
+    .theme-btn {
+    margin-left: 25px;
+    border: none;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #f5efe6;
+    color: #f58213;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 2px solid rgba(245, 130, 19, 0.15);
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(245, 130, 19, 0.3);
+}
+
+/* Light mode: show moon, hide sun */
+.theme-btn .icon-moon { display: block; }
+.theme-btn .icon-sun  { display: none;  }
+
+/* Dark mode: show sun, hide moon */
+body.dark .theme-btn {
+    background: #0F172A;
+    color: #f58213;
+    border-color: rgba(245, 130, 19, 0.3);
+    box-shadow: 0 4px 14px rgba(0,0,0,.35);
+}
+
+body.dark .theme-btn .icon-moon { display: none;  }
+body.dark .theme-btn .icon-sun  { display: block; }
     .brand-name { font-size: 23px; }
     .hero-slider { height: 380px; }
     .section-heading { display: block; }

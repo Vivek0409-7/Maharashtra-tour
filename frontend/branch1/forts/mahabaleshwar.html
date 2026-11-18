@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahabaleshwar | Queen of Sahyadri Hill Stations</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Mahabaleshwar</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
+                        <span class="arrow">&larr;</span> Back to All Forts & Hills
+                    </a>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Full-Width Hero Carousel Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273435_mahabaleshwar_1.jpg');">
+            <div class="slide-content">
+                <h2>Mahabaleshwar</h2>
+                <p>Heritage & Cultural Wonders of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80');">
+            <div class="slide-content">
+                <h2>Mahabaleshwar</h2>
+                <p>Timeless Splendor of the Western Ghats</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mahabaleshwar_valley_view.jpg/1280px-Mahabaleshwar_valley_view.jpg');">
+            <div class="slide-content">
+                <h2>Mahabaleshwar</h2>
+                <p>Majestic Destinations of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section container">
+            <h2>Overview</h2>
+            <p><strong>Mahabaleshwar</strong> is Maharashtra's most celebrated hill station, perched high upon the Western Ghats plateau at an altitude of 1,372 metres in the Satara district. Characterized by expansive green valleys, crisp mountain air, 30 dramatic cliff viewpoints, and lush strawberry orchards, it produces over 85% of India's strawberries.<br><br>Mahabaleshwar is the sacred cradle of <strong>five holy rivers</strong>—Krishna, Venna, Koyna, Savitri, and Gayatri—which originate from a stone cow's mouth inside the ancient <strong>Panchganga Temple</strong>. Having served as the British summer capital of the Bombay Presidency, Mahabaleshwar seamlessly pairs heritage colonial bungalows with timeless Maratha splendor.</p>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section container">
+            <h2>Historical Highlights</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273435_mahabaleshwar_1.jpg" alt="Panchganga River Origin" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Source of 5 Sacred Rivers</h3>
+                        <p>The 13th-century Panchganga temple marks the mystical confluence and origin of five sacred rivers, bringing pilgrims from all over India to bath in holy mountain waters.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mahabaleshwar_valley_view.jpg/1280px-Mahabaleshwar_valley_view.jpg" alt="Arthur's Seat Valley" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Arthur's Seat & Savitri Gorges</h3>
+                        <p>Arthur's Seat stands at 1,340 metres overlooking the deep abyss of the Savitri River valley. Light items tossed over the edge float back up due to intense upward air currents.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80" alt="Strawberry Farms" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Strawberry Capital of India</h3>
+                        <p>Introduced during the British era, Mahabaleshwar strawberries hold a registered GI (Geographical Indication) tag, celebrated in farm tours, jams, and fresh cream.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section container">
+            <h2>Major Attractions</h2>
+            <div class="table-responsive">
+                <table class="attractions-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Arthur's Seat Point</strong></td>
+                            <td>Known as the 'Queen of all Points', offering vertical drops into the Savitri gorge.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Venna Lake & Boating</strong></td>
+                            <td>Picturesque mountain lake bordered by pine trees with paddle boats and horse riding.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mapro Garden & Food Park</strong></td>
+                            <td>Famous agro-tourism complex with strawberry plantations, fresh fruit juices, and wood-fired pizza.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wilson Point (Sunrise Point)</strong></td>
+                            <td>The highest point in Mahabaleshwar providing unobstructed 360-degree sunrise views.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lingmala & Dhobi Waterfalls</strong></td>
+                            <td>Spectacular cascading waterfalls tumbling 600 feet into forested Sahyadri ravines.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Old Mahabaleshwar & Mahabali Temple</strong></td>
+                            <td>Centuries-old stone temples dedicated to Lord Shiva exhibiting Hemadpanthi architecture.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visitor Info & Interactive Route Selector -->
+        <section id="visitor-info" class="section container">
+            <h2>Essential Visitor Information</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Category:</strong> Hill</li>
+                    <li><strong>Location:</strong> Satara District, Western Ghats, Maharashtra</li>
+                    <li><strong>Elevation:</strong> 1,372 metres (4,501 ft) above sea level</li>
+                    <li><strong>Best Time to Visit:</strong> October to June (Strawberries & cool breezes; Monsoon for roaring waterfalls)</li>
+                    <li><strong>Entry Timings:</strong> Open 24 Hours (Points open 6:00 AM to 6:30 PM)</li>
+                </ul>
+                <div class="interactive-card">
+                    <h3>Plan Your Visit & Ascent</h3>
+                    <p>Choose your preferred mode of reaching Mahabaleshwar:</p>
+                    <div class="mode-buttons">
+
+                        <button class="mode-btn active" data-mode="route1" data-desc="Difficulty: Easy (Scenic Drive) | Approx. Time: 2.5 hours (120 km) from Pune via NH 48, ascending through Pasarni Ghat past Wai and Panchgani.">Drive from Pune via Wai</button>
+                        <button class="mode-btn" data-mode="route2" data-desc="Difficulty: Drive | Approx. Time: 4.5 hours (260 km) from Mumbai via Mumbai-Goa Highway (NH 66) via Mahad and Poladpur pass.">Drive from Mumbai via NH66</button>
+                        <button class="mode-btn" data-mode="route3" data-desc="Difficulty: Public Transport | Approx. Time: Direct overnight luxury AC sleeper and MSRTC state buses running daily from Mumbai, Pune, and Satara.">Luxury State Bus Route</button>
+                    </div>
+                    <p id="mode-description" class="mode-desc">Difficulty: Easy (Scenic Drive) | Approx. Time: 2.5 hours (120 km) from Pune via NH 48, ascending through Pasarni Ghat past Wai and Panchgani.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="section container">
+            <h2>Location & Route Map</h2>
+            <div class="streetview">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Mahabaleshwar+Satara+Maharashtra&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mahabaleshwar Heritage Project • Maharashtra Tourism Portal. Preserving history for generations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

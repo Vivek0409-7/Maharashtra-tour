@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torna Fort | Prachandagad & The Dawn of Swarajya</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Torna Fort</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#visitor-info">Visitor Info</a></li>
+                <li><a href="../Ginfo/index.html" class="back-to-forts-btn" aria-label="Back to All Forts">
+                        <span class="arrow">&larr;</span> Back to All Forts & Hills
+                    </a>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Full-Width Hero Carousel Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273383_torna_fort_1.jpg');">
+            <div class="slide-content">
+                <h2>Torna Fort</h2>
+                <p>Heritage & Cultural Wonders of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Torna_Fort_Maharashtra.jpg/1280px-Torna_Fort_Maharashtra.jpg');">
+            <div class="slide-content">
+                <h2>Torna Fort</h2>
+                <p>Timeless Splendor of the Western Ghats</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://www.mtdc.co.in/wp-content/uploads/2019/11/1563865812_1512127259_DKyhm4VVwAAOfG4.jpg.png.jpg');">
+            <div class="slide-content">
+                <h2>Torna Fort</h2>
+                <p>Majestic Destinations of Maharashtra</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section container">
+            <h2>Overview</h2>
+            <p><strong>Torna Fort</strong>, historically known as <strong>Prachandagad</strong> (meaning 'The Colossal Fort'), holds an immortal place in Indian history as the <strong>first fort captured by Chhatrapati Shivaji Maharaj in 1646</strong> when he was just 16 years old. This triumphant capture heralded the dawn of the Maratha Empire and the struggle for Hindavi Swarajya.<br><br>Located in the Velhe taluka of Pune district, Torna is the highest hill fortress in Pune district, soaring to 1,403 metres above sea level. Renowned for its enormous ridges—including the razor-sharp <strong>Zunjar Machi</strong> and the massive <strong>Budhla Machi</strong>—Torna offers sweeping views of Rajgad, Sinhagad, Raigad, and the sparkling backwaters of Bhatghar Dam.</p>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section container">
+            <h2>Historical Highlights</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1563273383_torna_fort_1.jpg" alt="Torna Fort Sunrise" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The First Victory at Age 16 (1646)</h3>
+                        <p>With a band of loyal Mavlas, the youthful Shivaji captured Torna without shedding blood, establishing his sovereign flag and uncovering hidden gold jars that funded the construction of Rajgad.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Torna_Fort_Maharashtra.jpg/1280px-Torna_Fort_Maharashtra.jpg" alt="Zunjar Machi cliff" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>The Daring Zunjar Machi</h3>
+                        <p>Zunjar Machi is a long, knife-edge rocky promontory fortified with high stone walls and rock-cut watch posts, creating a natural mountain bastion that dominated the western valley routes.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://www.mtdc.co.in/wp-content/uploads/2019/11/1563865812_1512127259_DKyhm4VVwAAOfG4.jpg.png.jpg" alt="Menghai Devi Shrine" onerror="this.onerror=null;this.src='../Ginfo/shiv.jpg';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Spiritual Guardians of Torna</h3>
+                        <p>Ancient shrines dedicated to Toranjai Devi and Menghai Devi crown the central plateau, offering safe shelter to trekkers and preserving centuries of rural folklore.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="section container">
+            <h2>Major Attractions</h2>
+            <div class="table-responsive">
+                <table class="attractions-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Zunjar Machi</strong></td>
+                            <td>A daring, razor-thin fortified ridge requiring caution, surrounded by 1,000-foot drop-offs on both sides.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Budhla Machi</strong></td>
+                            <td>A unique rocky formation resembling an overturned oil pot ('Budhla'), boasting strong double ramparts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Menghai Devi Temple</strong></td>
+                            <td>The spiritual sanctum at the center of the plateau offering panoramic sunrise views.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bini Darwaza & Kothi Darwaza</strong></td>
+                            <td>The rugged stone gateway entrances fortified with deep bastion curves.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kokankada of Torna</strong></td>
+                            <td>A colossal cliff face providing dramatic downward views into the misty Konkan river basin.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bhatghar Dam Panorama</strong></td>
+                            <td>Unobstructed vistas of the gleaming reservoir waters framed against green mountain chains.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visitor Info & Interactive Route Selector -->
+        <section id="visitor-info" class="section container">
+            <h2>Essential Visitor Information</h2>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Category:</strong> Fort</li>
+                    <li><strong>Location:</strong> Pune District (near Velhe), Maharashtra</li>
+                    <li><strong>Elevation:</strong> 1,403 metres (4,603 ft) above sea level</li>
+                    <li><strong>Best Time to Visit:</strong> September to February (Post-monsoon lushness & cool winters)</li>
+                    <li><strong>Entry Timings:</strong> 6:00 AM to 6:00 PM</li>
+                </ul>
+                <div class="interactive-card">
+                    <h3>Plan Your Visit & Ascent</h3>
+                    <p>Choose your preferred mode of reaching Torna Fort:</p>
+                    <div class="mode-buttons">
+
+                        <button class="mode-btn active" data-mode="route1" data-desc="Difficulty: Moderate to Challenging | Approx. Time: 3 to 3.5 hours. The standard trek starts from Velhe base village with rocky trails and rock-cut steps with safety chains.">Velhe Village Route</button>
+                        <button class="mode-btn" data-mode="route2" data-desc="Difficulty: Strenuous | Approx. Time: 4 hours. Rustic trail starting from Bhutonde village climbing the steeper and less-frequented southern slopes of the fort.">Bhutonde Forest Trail</button>
+                        <button class="mode-btn" data-mode="route3" data-desc="Difficulty: Adventurous Expedition | Approx. Time: 7 hours. Traverse trek along the mountainous ridge linking Torna Fort with Rajgad Fort.">Torna-Rajgad Ridge</button>
+                    </div>
+                    <p id="mode-description" class="mode-desc">Difficulty: Moderate to Challenging | Approx. Time: 3 to 3.5 hours. The standard trek starts from Velhe base village with rocky trails and rock-cut steps with safety chains.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="section container">
+            <h2>Location & Route Map</h2>
+            <div class="streetview">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Torna+Fort+Velhe+Pune+Maharashtra&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Torna Fort Heritage Project • Maharashtra Tourism Portal. Preserving history for generations.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
